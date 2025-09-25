@@ -1,0 +1,41 @@
+.container {
+  width: 1098px;
+  height: 100vh;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: var(--si);
+  margin-top: 1.25rem;
+  & input {
+    appearance: none;
+    width: 1.875rem;
+    height: 1.25rem;
+    background-color: var(--content-tertiary);
+    border-radius: 50px;
+    position: relative;
+    
+  }
+  & input::before {
+    content: "";
+    width: 0.875rem;
+    height: 0.875rem;
+    background-color: var(--content-primary);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    transition: 0.5s ease-in-out;
+  }
+  & input:checked {
+    background: linear-gradient(#d586e0 0%, #91a1fa 98.93%);
+  }
+  & input:checked::before {
+    content: "";
+    transform: translateX(10px);
+  }
+}

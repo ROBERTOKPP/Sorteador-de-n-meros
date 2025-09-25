@@ -1,0 +1,15 @@
+.btn-primary{
+  margin-top: 40px;
+  width: 100%;
+  padding-block: 1rem;
+  background: var(--background-tertiary);
+  border: none;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  color: white;
+  font: var(--ls);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}

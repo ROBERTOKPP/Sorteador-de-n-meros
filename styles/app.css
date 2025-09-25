@@ -1,0 +1,80 @@
+#app {
+  background: url(/assets/img/background.png);
+  & .logo{
+    width: 1098px;
+    margin-inline: auto;
+    padding-block: 4.75rem;
+  }
+  & .app-content {
+    display: flex;
+    gap: 2.5rem;
+    & > :nth-child(1) {
+      display: flex;
+      gap: 2.375rem;
+      flex-direction: column;
+    }
+    & header {
+      text-transform: uppercase;
+      & span {
+        font: var(--overline);
+        background: linear-gradient(90deg, #c7c9cc, #3d3d3d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    & .itens {
+      display: flex;
+      gap: 2.25rem;
+      flex-direction: column;
+      & .item {
+        display: flex;
+        gap: 0.5rem;
+        align-items: start;
+        & span {
+          font: var(--pm);
+          color: var(--content-brand);
+        }
+        & p {
+          font: var(--ps);
+        }
+      }
+    }
+  }
+
+  form {
+    & legend {
+      text-transform: uppercase;
+      font: var(--lm);
+      padding-top: 2.125rem;
+    }
+    & p {
+      font: var(--pl);
+      margin-bottom: 2.5rem;
+    }
+    & .fields {
+      display: flex;
+      gap: .875rem;
+      text-align: center;
+      & .number-field {
+        text-transform: uppercase;
+        font: 700 1rem/1.5 var(--roboto-flex);
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        & input {
+          appearance: none;
+          background-color: var(--background-secondary);
+          border: none;
+          border-radius: .5rem;
+          width: 5.375rem; 
+          height: 3.5rem;
+          font: var(--ds);
+          text-align: center;
+          color: white;
+
+        }
+      }
+    }
+  }
+}
