@@ -1,5 +1,6 @@
 .container {
   width: 1098px;
+  height: 100vh;
   margin-inline: auto;
   justify-content: center;
 }

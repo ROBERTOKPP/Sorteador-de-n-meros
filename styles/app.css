@@ -2,15 +2,15 @@
   /* background: url(/assets/img/background.png) no-repeat;
   background-position: center;
    */
-  & .logo {
-    width: 1098px;
-    margin-inline: auto;
-    padding-block: 4.75rem;
-  }
-  & .app-content {
-    display: flex;
-    gap: 2.5rem;
+   & .app-content {
+     display: flex;
+     gap: 2.5rem;
 
+     & .logo {
+       padding-block: 1rem;
+       height: 100%;
+     }
+     
     & > :nth-child(1) {
       max-width: 32rem;
       display: flex;
@@ -46,7 +46,7 @@
     }
   }
 
- & form {
+  & form {
     /* display: none; */
     & legend {
       text-transform: uppercase;
@@ -83,11 +83,10 @@
   }
 
   & #result {
-    
-    max-width: 482px;
-    display: flex;
+    /* max-width: 482px; */
+    display: none;
     flex-direction: column;
-    
+
     align-items: center;
     padding-top: 2.125rem;
     text-align: center;
@@ -117,25 +116,25 @@
 @media (width < 1000px) {
   #app {
     background: none;
-  & .logo {
-    padding: 1rem;
-  }
-  & .app-content {
-    display: flex;
-    flex-direction: column;
-    padding-inline: 1rem;
-    padding-top: 3rem;
-    gap: 1rem;
-    & > :nth-child(1) {
-      max-width: auto;
-      gap: .5rem;
+    & .logo {
+      padding: 1rem;
+    }
+    & .app-content {
+      display: flex;
+      flex-direction: column;
+      padding-inline: 1rem;
+      padding-top: 3rem;
+      gap: 1rem;
+      & > :nth-child(1) {
+        max-width: initial;
+        gap: 0.5rem;
+      }
+    }
+    & #result {
+      max-width: initial;
+    }
+    & button {
+      margin-bottom: 3rem;
     }
   }
-  & #result {
-    max-width: auto;
-  }
-  & button{
-    margin-bottom: 3rem;
-  }
-}
 }
