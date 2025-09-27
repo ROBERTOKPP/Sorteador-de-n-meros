@@ -42,17 +42,13 @@ body {
   color: white;
 }
 
-@media (width < 1000px) {
-  body {
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-}
-
 h1 {
   font: var(--dl);
 }
 @media (width < 1000px) {
+  body {
+    overflow: auto;
+  }
   h1 {
     font: var(--dm);
   }
