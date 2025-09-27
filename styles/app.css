@@ -128,5 +128,8 @@
       gap: .5rem;
     }
   }
+  & button{
+    margin-bottom: 3rem;
+  }
 }
 }
