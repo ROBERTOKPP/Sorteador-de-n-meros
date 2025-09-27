@@ -45,3 +45,8 @@ body {
 h1 {
   font: var(--dl);
 }
+@media (width < 1000px) {
+  h1 {
+    font: var(--dm);
+  }
+}
