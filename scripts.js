@@ -58,5 +58,19 @@ btn.addEventListener("click", (event) => {
   } else {
     alert("Valores incorretos");
   }
+
+  const form = document.getElementById("form");
+  form.style.display = "none";
+  const result = document.getElementById("result");
+  result.style.display = "flex";
+
+  const ul = document.querySelector("ul");
+ 
+  numRandom.forEach(num => {
+  const li = document.createElement("li");
+  li.textContent = num; // coloca o valor dentro do <li>
+  ul.appendChild(li);   // adiciona o <li> na <ul>
+});
+
   console.log(numRandom);
 });

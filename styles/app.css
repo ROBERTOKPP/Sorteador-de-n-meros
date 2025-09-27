@@ -1,6 +1,6 @@
 #app {
   background: url(/assets/img/background.png);
-  & .logo{
+  & .logo {
     width: 1098px;
     margin-inline: auto;
     padding-block: 4.75rem;
@@ -8,7 +8,9 @@
   & .app-content {
     display: flex;
     gap: 2.5rem;
+
     & > :nth-child(1) {
+      max-width: 32rem;
       display: flex;
       gap: 2.375rem;
       flex-direction: column;
@@ -43,6 +45,7 @@
   }
 
   form {
+    /* display: none; */
     & legend {
       text-transform: uppercase;
       font: var(--lm);
@@ -54,26 +57,56 @@
     }
     & .fields {
       display: flex;
-      gap: .875rem;
+      gap: 0.875rem;
       text-align: center;
       & .number-field {
         text-transform: uppercase;
         font: 700 1rem/1.5 var(--roboto-flex);
         display: flex;
         flex-direction: column;
-        gap: .5rem;
+        gap: 0.5rem;
         & input {
           appearance: none;
           background-color: var(--background-secondary);
           border: none;
-          border-radius: .5rem;
-          width: 5.375rem; 
+          border-radius: 0.5rem;
+          width: 5.375rem;
           height: 3.5rem;
           font: var(--ds);
           text-align: center;
           color: white;
-
         }
+      }
+    }
+  }
+
+  & #result {
+    
+    max-width: 482px;
+    display: none;
+    flex-direction: column;
+    
+    align-items: center;
+    padding-top: 2.125rem;
+    text-align: center;
+    text-transform: uppercase;
+    & h2 {
+      font: var(--lm);
+    }
+    & span {
+      font: var(--overline);
+    }
+    & ul {
+      padding-top: 2.5rem;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      & li {
+        padding: 1rem;
+        color: var(--content-brand);
+        font: var(--number);
+        /* line-height: 0; */
       }
     }
   }
