@@ -114,7 +114,7 @@
 
 @media (width < 1000px) {
   #app {
-
+    background: none;
   & .logo {
     padding: 1rem;
   }
