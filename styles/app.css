@@ -85,7 +85,7 @@
   & #result {
     
     max-width: 482px;
-    display: none;
+    display: flex;
     flex-direction: column;
     
     align-items: center;
