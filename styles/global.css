@@ -42,6 +42,12 @@ body {
   color: white;
 }
 
+@media (width < 1000px) {
+  body {
+    overflow: scroll;
+  }
+}
+
 h1 {
   font: var(--dl);
 }
