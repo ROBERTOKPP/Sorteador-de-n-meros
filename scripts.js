@@ -1,6 +1,7 @@
 const numOne = document.getElementById("num-one");
 const numTwo = document.getElementById("num-two");
 const numThree = document.getElementById("num-three");
+const btn = document.querySelector("button");
 
 function onlyNumber(input) {
   input.value = input.value.replace(/[^0-9]/g, "");
@@ -11,14 +12,51 @@ numOne.addEventListener("input", () => {
   const valorNumOne = Number(numOne.value);
   console.log(valorNumOne);
 });
+
 numTwo.addEventListener("input", () => {
   onlyNumber(numTwo);
-  const valornumTwo = Number(numTwo.value);
-  console.log(valornumTwo);
+  const valorNumTwo = Number(numTwo.value);
+  console.log(valorNumTwo);
 });
 
 numThree.addEventListener("input", () => {
   onlyNumber(numThree);
-  const valornumThree = Number(numThree.value);
-  console.log(valornumThree);
+  const valorNumThree = Number(numThree.value);
+  console.log(valorNumThree);
+});
+
+btn.addEventListener("click", (event) => {
+  event.preventDefault();
+  const valorNumOne = Number(numOne.value);
+  const valorNumTwo = Number(numTwo.value);
+  const valorNumThree = Number(numThree.value);
+  // NUMERO RANDOM
+
+  let numbers = [];
+  let numRandom = [];
+  if (valorNumOne > 0 && valorNumThree > 0 && valorNumTwo < valorNumThree) {
+    for (let list = valorNumTwo; list <= valorNumThree; list++) {
+      numbers.push(list);
+    }
+    const toggle = document.getElementById("switch");
+
+    if (toggle.checked) {
+      numRandom = [...numbers];
+      for (let i = numRandom.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [numRandom[i], numRandom[j]] = [numRandom[j], numRandom[i]];
+      }
+      numRandom = numRandom.slice(0, valorNumOne);
+      console.log("sem repeti");
+    } else {
+      for (let i = 0; i < valorNumOne; i++) {
+        const randomIndex = Math.floor(Math.random() * numbers.length);
+        numRandom.push(numbers[randomIndex]);
+      }
+      console.log("repetindo");
+    }
+  } else {
+    alert("Valores incorretos");
+  }
+  console.log(numRandom);
 });
