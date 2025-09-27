@@ -1,5 +1,7 @@
 #app {
-  background: url(/assets/img/background.png);
+  /* background: url(/assets/img/background.png) no-repeat;
+  background-position: center;
+   */
   & .logo {
     width: 1098px;
     margin-inline: auto;
