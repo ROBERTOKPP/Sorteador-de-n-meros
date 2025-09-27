@@ -127,9 +127,12 @@
     padding-top: 3rem;
     gap: 1rem;
     & > :nth-child(1) {
-      max-width: 100%;
+      max-width: auto;
       gap: .5rem;
     }
+  }
+  & #result {
+    max-width: auto;
   }
   & button{
     margin-bottom: 3rem;
