@@ -38,7 +38,7 @@
 
 body {
   background-color: var(--background-primary);
-  overflow: hidden;
+  
   color: white;
 }
 
@@ -46,9 +46,6 @@ h1 {
   font: var(--dl);
 }
 @media (width < 1000px) {
-  body {
-    overflow: auto;
-  }
   h1 {
     font: var(--dm);
   }
