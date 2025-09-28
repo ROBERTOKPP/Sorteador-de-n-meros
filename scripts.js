@@ -68,8 +68,8 @@ btn.addEventListener("click", (event) => {
  
   numRandom.forEach(num => {
   const li = document.createElement("li");
-  li.textContent = num; // coloca o valor dentro do <li>
-  ul.appendChild(li);   // adiciona o <li> na <ul>
+  li.textContent = num; 
+  ul.appendChild(li);
 });
 
   console.log(numRandom);
