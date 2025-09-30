@@ -49,6 +49,7 @@ btn.addEventListener("click", (event) => {
       numRandom = numRandom.slice(0, valorNumOne);
       console.log("sem repeti");
     } else {
+
       for (let i = 0; i < valorNumOne; i++) {
         const randomIndex = Math.floor(Math.random() * numbers.length);
         numRandom.push(numbers[randomIndex]);
@@ -79,8 +80,7 @@ btn.addEventListener("click", (event) => {
 
 const btnResult = document.getElementById("btn-result");
 
-btnResult.addEventListener("click", (event) => {
-  event.preventDefault();
+btnResult.addEventListener("click", () => {
   const form = document.getElementById("form");
   form.style.display = "flex";
   form.style.flexDirection = "column";
@@ -90,4 +90,7 @@ btnResult.addEventListener("click", (event) => {
   numOne.value = "";
   numTwo.value = "";
   numThree.value = "";
+
+  const ul = document.querySelector("ul");
+  ul.innerHTML = "";
 });
