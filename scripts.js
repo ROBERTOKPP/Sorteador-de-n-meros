@@ -83,7 +83,7 @@ const btnResult = document.getElementById("btn-result");
 btnResult.addEventListener("click", () => {
   const form = document.getElementById("form");
   form.style.display = "flex";
-  form.style.flexDirection = "column";
+  
 
   const result = document.getElementById("result");
   result.style.display = "none";
