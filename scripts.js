@@ -27,14 +27,14 @@ numThree.addEventListener("input", () => {
 
 btn.addEventListener("click", (event) => {
   event.preventDefault();
+
   const valorNumOne = Number(numOne.value);
   const valorNumTwo = Number(numTwo.value);
   const valorNumThree = Number(numThree.value);
-  // NUMERO RANDOM
 
   let numbers = [];
   let numRandom = [];
-  if (valorNumOne > 0 && valorNumThree > 0 && valorNumTwo < valorNumThree) {
+  if (valorNumOne > 0 && valorNumThree > 0 && valorNumTwo <= valorNumThree) {
     for (let list = valorNumTwo; list <= valorNumThree; list++) {
       numbers.push(list);
     }
@@ -57,6 +57,10 @@ btn.addEventListener("click", (event) => {
     }
   } else {
     alert("Valores incorretos");
+    numOne.value = "";
+    numTwo.value = "";
+    numThree.value = "";
+    return;
   }
 
   const form = document.getElementById("form");
@@ -65,12 +69,25 @@ btn.addEventListener("click", (event) => {
   result.style.display = "flex";
 
   const ul = document.querySelector("ul");
- 
-  numRandom.forEach(num => {
-  const li = document.createElement("li");
-  li.textContent = num; 
-  ul.appendChild(li);
+
+  numRandom.forEach((num) => {
+    const li = document.createElement("li");
+    li.textContent = num;
+    ul.appendChild(li);
+  });
 });
 
-  console.log(numRandom);
+const btnResult = document.getElementById("btn-result");
+
+btnResult.addEventListener("click", (event) => {
+  event.preventDefault();
+  const form = document.getElementById("form");
+  form.style.display = "flex";
+  form.style.flexDirection = "column";
+
+  const result = document.getElementById("result");
+  result.style.display = "none";
+  numOne.value = "";
+  numTwo.value = "";
+  numThree.value = "";
 });
